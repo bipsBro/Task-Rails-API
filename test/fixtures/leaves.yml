@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: MyString
+  leavetype: MyString
+  reason: MyText
+  user: one
+
+two:
+  date: MyString
+  leavetype: MyString
+  reason: MyText
+  user: two
