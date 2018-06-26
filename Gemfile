@@ -11,6 +11,7 @@ gem 'rails', '~> 5.1.6'
 gem 'mysql2'
 gem 'puma', '~> 3.7'
 gem 'devise'
+gem 'simple_token_authentication', '~> 1.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

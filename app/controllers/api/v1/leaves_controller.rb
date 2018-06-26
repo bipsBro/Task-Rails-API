@@ -22,10 +22,21 @@ module Api
 				articles = Leave.order('created_at DESC');
 				render json: {status: 'SUCCESS', message: 'Loaded articles', data:articles}, status: :ok
 			end
+			# POST /leaves
+			def create
+				leave = Leave.new(leave_params)
+				if leave.save
+					render json: {status: 'SUCCESS', message: 'Saved article', data:leave}, status: :ok
+				else
+					render json: {status: 'ERROR', message: 'Not saved', data:leave.errors}, status: :unprocessable_entry
+				end
+			end
+
 			private
-				CLIENT_ID = "386081642915.387031384306"
-				SECRET_KEY = "a331ff5678ac53faf2ee1fea7b73415b"
-				CODE = ""
+				# Only allow a trusted parameter "white list" through.
+			    def leave_params
+			      	params.permit(:date, :leavetype, :reason)
+			    end
 				def token
 					
 				end

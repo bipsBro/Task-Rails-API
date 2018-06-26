@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
-  devise_for :models
-  get 'leave/create'
+  # devise_for :users
+  # devise_for :models
+  # get 'leave/create'
   namespace 'api' do
 		namespace 'v1' do
 			resources :leaves
+      resources :session, only: [:create, :destroy]
 		end
 	end
   # resources :leave do
