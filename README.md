@@ -8,10 +8,20 @@
 	need to set
 	> username
 	> password
-	
+
 * Set Slack Api Bearer token in /app/controller/api/v1/leaves_controller.rb in line no 52
 
 Run Process
 
 * Start mysql server first
 * run rails server
+
+API points
+* for login process
+	> POST /api/v1/session
+
+	
+* for leave fatch
+	> GET /api/v1/leaves
+* for leave create
+	> POST /api/v1/leaves
